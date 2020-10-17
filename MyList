@@ -93,6 +93,17 @@ package com.company;
             return result;
 
         }
-
+        public Item indexAt(int index) {
+            if ((index <= this.counter - 1)&(index >= 0)) {
+                Item iter = this.begin;
+                for(; index > 0; --index) {
+                    iter = iter.getNext();
+                }
+                System.out.println(iter);
+                return iter;
+            }
+            else
+                return null;
+        }
 
     }
