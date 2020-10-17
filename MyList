@@ -105,5 +105,32 @@ package com.company;
             else
                 return null;
         }
+        public void swap(int firstPros, int secondPros) {
+            if (firstPros > secondPros) {
+                int tmp = firstPros;
+                firstPros = secondPros;
+                secondPros = tmp;
+        }
+        if (firstPros >= 0) {
+            Item firstBef = indexAt(firstPros - 1);
+            Item first = this.indexAt(firstPros);
+            Item firstAft = this.indexAt(firstPros + 1);
+            Item secondBef = this.indexAt(secondPros - 1);
+            Item second = this.indexAt(secondPros);
+            Item secondAft = this.indexAt(secondPros + 1);
 
+            first.setNext(secondAft);
+            if (firstBef != null)
+                firstBef.setNext(second);
+            else
+                this.begin = second;
+            if (secondBef != first) {
+                secondBef.setNext(first);
+                second.setNext(firstAft);
+            }
+            else {
+                second.setNext(first);
+        }
     }
+}
+    
