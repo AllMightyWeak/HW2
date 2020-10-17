@@ -18,5 +18,8 @@ public class Main {
         System.out.println(a);
         a.swap(5, 0);
         System.out.println(a);
+        
+        a.sort();
+        System.out.println(a);
     }
 }
