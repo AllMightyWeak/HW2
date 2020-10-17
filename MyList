@@ -132,5 +132,35 @@ package com.company;
                 second.setNext(first);
         }
     }
-}
+    
+         public void sort(){
+            long count=this.counter;
+                int x;
+                int y;
+                Item temp1;
+                Item temp2;
+                while(count >0){
+                    x = 0;
+                    y = 1;
+                    temp1 = indexAt(x);
+                    temp2 = indexAt(y);
+                    while (y <count){
+                        if(temp1.getValue()> temp2.getValue()){
+                            swap(x,y);
+                            x += 1;
+                            y += 1;
+                            temp1 = indexAt(x);
+                            temp2 = indexAt(y);
+                        }
+                        else if(temp1.getValue() <= temp2.getValue()){
+                            ++x;
+                            ++y;
+                            temp1= temp1.getNext();
+                            temp2 = temp2.getNext();
+                        }
+                    }
+                    --count;
+                }
+            }
+        }
     
