@@ -11,6 +11,12 @@ public class Main {
         a.add(35);
         a.add(98);
         System.out.println(a);
-
+        
+        a.swap(2, 4);
+        System.out.println(a);
+        a.swap(0, 3);
+        System.out.println(a);
+        a.swap(5, 0);
+        System.out.println(a);
     }
 }
